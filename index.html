@@ -52,7 +52,129 @@
                 <p>Electrical engineering explores the principles of electricity, electronics, and electromagnetism to design and analyze systems. It covers circuits, power systems, and electronic devices, using concepts like Ohm’s Law, Kirchhoff’s Laws, and AC/DC behavior. Applications span from household electronics to power grids and telecommunications, ensuring efficient and reliable performance.</p>
             </section>
             <hr>
-            
+            <!--Note-->
+            <section>
+                <h2>Note:</h2>
+                <p>Some processes are best described in my cheat sheet, I prefer that.</p>
+            </section>
+            <!--Equations-->
+            <section>
+                <h2>1. Basic Quantities</h2>
+                <p>Ohm’s Law: \( V = I R \)</p>
+                <p>Power: \( P = V I = I^2 R = \frac{V^2}{R} \)</p>
+                <p>Energy: \( W = P t \)</p>
+                <p>Charge: \( Q = I t \)</p>
+                <p>Conductance: \( G = \frac{1}{R} \)</p>
+
+                <h2>2. Series and Parallel Circuits</h2>
+                <p>Series Resistance: \( R_{\text{eq}} = R_1 + R_2 + \cdots + R_n \)</p>
+                <p>Parallel Resistance: \( \frac{1}{R_{\text{eq}}} = \frac{1}{R_1} + \frac{1}{R_2} + \cdots + \frac{1}{R_n} \)</p>
+                <p>Voltage Divider: \( V_x = V_{\text{total}} \frac{R_x}{R_1 + R_2 + \cdots + R_n} \)</p>
+                <p>Current Divider: \( I_x = I_{\text{total}} \frac{R_{\text{eq}}}{R_x} \)</p>
+
+                <h2>3. Kirchhoff’s Laws</h2>
+                <p>Kirchhoff’s Voltage Law (KVL): \( \sum V_i = 0 \) (around a loop)</p>
+                <p>Kirchhoff’s Current Law (KCL): \( \sum I_{\text{in}} = \sum I_{\text{out}} \) (at a node)</p>
+
+                <h2>4. Diodes</h2>
+                <p>Diode Equation (Shockley): \( I = I_S \left( e^{\frac{V_D}{n V_T}} - 1 \right) \), \( V_T = \frac{k T}{q} \approx 25 \, \text{mV at 300 K} \)</p>
+                <p>Zener Diode Breakdown: \( V_Z = \text{constant at breakdown voltage} \)</p>
+                <p>Diode Voltage Drop (Silicon): \( V_D \approx 0.7 \, \text{V} \)</p>
+                <p>Diode Power Dissipation: \( P_D = V_D I_D \)</p>
+
+                <h2>5. Capacitors</h2>
+                <p>Capacitance: \( Q = C V \)</p>
+                <p>Capacitor Current: \( I = C \frac{dV}{dt} \)</p>
+                <p>Capacitor Energy: \( W = \frac{1}{2} C V^2 \)</p>
+                <p>Capacitor Voltage (Charging): \( V(t) = V_0 \left( 1 - e^{-t / RC} \right) \)</p>
+                <p>Capacitor Voltage (Discharging): \( V(t) = V_0 e^{-t / RC} \)</p>
+                <p>Time Constant: \( \tau = R C \)</p>
+
+                <h2>6. Inductors</h2>
+                <p>Inductance: \( V = L \frac{dI}{dt} \)</p>
+                <p>Inductor Energy: \( W = \frac{1}{2} L I^2 \)</p>
+                <p>Time Constant: \( \tau = \frac{L}{R} \)</p>
+
+                <h2>7. Step Responses</h2>
+                <p>RC Circuit Step Response (Voltage): \( V_C(t) = V_s \left( 1 - e^{-t / RC} \right) \) (charging)</p>
+                <p>RL Circuit Step Response (Current): \( I_L(t) = \frac{V_s}{R} \left( 1 - e^{-t R / L} \right) \)</p>
+                <p>Second-Order Step Response (RLC, Underdamped): \( V(t) = V_s \left( 1 - \frac{e^{-\zeta \omega_n t}}{\sqrt{1 - \zeta^2}} \sin(\omega_d t + \phi) \right) \), \( \omega_d = \omega_n \sqrt{1 - \zeta^2} \)</p>
+                <p>Damping Ratio: \( \zeta = \frac{R}{2} \sqrt{\frac{C}{L}} \)</p>
+                <p>Natural Frequency: \( \omega_n = \frac{1}{\sqrt{L C}} \)</p>
+
+                <h2>8. Operational Amplifiers (Op-Amps)</h2>
+                <p>Inverting Amplifier Gain: \( A_v = -\frac{R_f}{R_{\text{in}}} \)</p>
+                <p>Non-Inverting Amplifier Gain: \( A_v = 1 + \frac{R_f}{R_g} \)</p>
+                <p>Voltage Follower: \( V_{\text{out}} = V_{\text{in}} \)</p>
+                <p>Summing Amplifier: \( V_{\text{out}} = -R_f \left( \frac{V_1}{R_1} + \frac{V_2}{R_2} + \cdots \right) \)</p>
+                <p>Difference Amplifier: \( V_{\text{out}} = \frac{R_2}{R_1} (V_2 - V_1) \)</p>
+                <p>Input Impedance (Ideal Op-Amp): \( Z_{\text{in}} \to \infty \)</p>
+                <p>Output Impedance (Ideal Op-Amp): \( Z_{\text{out}} \to 0 \)</p>
+
+                <h2>9. Passive Filters</h2>
+                <p>Low-Pass Filter (RC) Cutoff Frequency: \( f_c = \frac{1}{2 \pi R C} \)</p>
+                <p>High-Pass Filter (RC) Cutoff Frequency: \( f_c = \frac{1}{2 \pi R C} \)</p>
+                <p>Band-Pass Filter Bandwidth: \( \text{BW} = f_{c2} - f_{c1} \)</p>
+                <p>Transfer Function (Low-Pass RC): \( H(s) = \frac{1}{1 + s R C} \)</p>
+                <p>Transfer Function (High-Pass RC): \( H(s) = \frac{s R C}{1 + s R C} \)</p>
+
+                <h2>10. Active Filters</h2>
+                <p>Low-Pass Filter (First-Order, Non-Inverting): \( H(s) = \frac{A}{1 + s R C} \), \( A = 1 + \frac{R_f}{R_g} \)</p>
+                <p>High-Pass Filter (First-Order): \( H(s) = \frac{A s R C}{1 + s R C} \)</p>
+                <p>Band-Pass Filter (Second-Order): \( H(s) = \frac{A s \frac{\omega_0}{Q}}{s^2 + s \frac{\omega_0}{Q} + \omega_0^2} \)</p>
+                <p>Quality Factor: \( Q = \frac{\omega_0}{\text{BW}} \)</p>
+                <p>Center Frequency: \( \omega_0 = \frac{1}{\sqrt{R_1 R_2 C_1 C_2}} \)</p>
+
+                <h2>11. AC Circuits</h2>
+                <p>Impedance: \( Z = R + j X \), \( |Z| = \sqrt{R^2 + X^2} \)</p>
+                <p>Reactance (Inductive): \( X_L = \omega L = 2 \pi f L \)</p>
+                <p>Reactance (Capacitive): \( X_C = \frac{1}{\omega C} = \frac{1}{2 \pi f C} \)</p>
+                <p>AC Power (Average): \( P = V_{\text{rms}} I_{\text{rms}} \cos\phi \)</p>
+                <p>RMS Voltage/Current: \( V_{\text{rms}} = \frac{V_{\text{peak}}}{\sqrt{2}} \), \( I_{\text{rms}} = \frac{I_{\text{peak}}}{\sqrt{2}} \)</p>
+                <p>Power Factor: \( \cos\phi = \frac{R}{|Z|} \)</p>
+                <p>Series Impedance: \( Z_{\text{eq}} = Z_1 + Z_2 + \cdots + Z_n \)</p>
+                <p>Parallel Impedance: \( \frac{1}{Z_{\text{eq}}} = \frac{1}{Z_1} + \frac{1}{Z_2} + \cdots + \frac{1}{Z_n} \)</p>
+                <p>Resonance Frequency: \( f_0 = \frac{1}{2 \pi \sqrt{L C}} \)</p>
+                <p>Quality Factor: \( Q = \frac{\omega_0 L}{R} = \frac{1}{R \sqrt{L C}} \)</p>
+
+                <h2>12. Rectifiers</h2>
+                <p>Half-Wave Rectifier Output: \( V_{\text{out}} = V_{\text{peak}} - V_D \)</p>
+                <p>Full-Wave Rectifier Output: \( V_{\text{avg}} = \frac{2 V_{\text{peak}}}{\pi} - 2 V_D \)</p>
+                <p>Ripple Voltage (Capacitor Filter): \( V_r \approx \frac{I_{\text{load}}}{f C} \)</p>
+                <p>Peak Inverse Voltage (PIV, Full-Wave): \( \text{PIV} = 2 V_{\text{peak}} \)</p>
+
+                <h2>13. Voltage Regulators</h2>
+                <p>Zener Regulator Output: \( V_{\text{out}} = V_Z \)</p>
+                <p>Load Regulation: \( \text{Regulation} = \frac{V_{\text{no-load}} - V_{\text{full-load}}}{V_{\text{full-load}}} \times 100\% \)</p>
+                <p>Series Regulator Output: \( V_{\text{out}} = V_{\text{ref}} \left( 1 + \frac{R_2}{R_1} \right) \)</p>
+                <p>Line Regulation: \( \text{Regulation} = \frac{\Delta V_{\text{out}}}{\Delta V_{\text{in}}} \times 100\% \)</p>
+
+                <h2>14. Three-Phase Systems</h2>
+                <p>Line Voltage: \( V_L = \sqrt{3} V_{\phi} \)</p>
+                <p>Line Current (Delta): \( I_L = \sqrt{3} I_{\phi} \)</p>
+                <p>Power (Three-Phase): \( P = \sqrt{3} V_L I_L \cos\phi \)</p>
+                <p>Star/Delta Conversion (Resistance, Star to Delta): \( R_{\Delta} = 3 R_Y \)</p>
+                <p>Star/Delta Conversion (Resistance, Delta to Star): \( R_Y = \frac{R_{\Delta}}{3} \)</p>
+
+                <h2>15. Transformers</h2>
+                <p>Turns Ratio: \( a = \frac{N_1}{N_2} \)</p>
+                <p>Voltage Transformation: \( \frac{V_1}{V_2} = \frac{N_1}{N_2} = a \)</p>
+                <p>Current Transformation: \( \frac{I_1}{I_2} = \frac{N_2}{N_1} = \frac{1}{a} \)</p>
+                <p>Impedance Transformation: \( Z_2' = a^2 Z_2 \)</p>
+                <p>EMF Equation: \( E = 4.44 f N \Phi_m \)</p>
+
+                <h2>16. DC Machines</h2>
+                <p>Generated EMF: \( E = \frac{N P \Phi Z}{60 A} \)</p>
+                <p>Torque: \( T = \frac{P Z \Phi I_a}{2 \pi A} \)</p>
+                <p>Power: \( P = E I_a \)</p>
+                <p>Efficiency: \( \eta = \frac{P_{\text{out}}}{P_{\text{in}}} \)</p>
+
+                <h2>17. AC Machines</h2>
+                <p>Synchronous Speed: \( n_s = \frac{120 f}{P} \)</p>
+                <p>Slip: \( s = \frac{n_s - n_r}{n_s} \)</p>
+                <p>Induction Motor Torque: \( T = \frac{3 V_{\phi}^2 R_2 / s}{\omega_s (R_2/s + R_1)^2 + (X_1 + X_2)^2} \)</p>
+                <p>Power Output: \( P_{\text{out}} = (1 - s) P_g \), \( P_g = \text{air gap power} \)</p>
+            </section>
         </main>
         <footer>
             <p>Find something wrong? Want to contribute? Please email me!</p>
